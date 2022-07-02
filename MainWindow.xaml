@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel>
+            <Button x:Name="AddAppointmentButton"
+                    Content="Dodaj wizytę"
+                    FontSize="30"
+                    Margin="5"
+                    Click="AddAppointmentButton_Click"/>
 
+            <Button x:Name="AddPetButton"
+                    Content="Dodaj zwierzę"
+                    FontSize="30"
+                    Margin="5"
+                    Click="AddPetButton_Click"/>
+            
+        </StackPanel>
     </Grid>
 </Window>

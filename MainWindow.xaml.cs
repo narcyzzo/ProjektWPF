@@ -26,10 +26,18 @@ namespace ProjektWPF
         {
             InitializeComponent();
 
-            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["cn"].ConnectionString);
+            
+        }
 
-            ApplicationDbContext dbContext = new ApplicationDbContext(optionsBuilder.Options);
+        private void AddAppointmentButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddPetButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window win = new AddPetWindow();
+            win.Show();
         }
     }
 }
