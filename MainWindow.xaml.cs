@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,11 @@ namespace ProjektWPF
         public MainWindow()
         {
             InitializeComponent();
+
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["cn"].ConnectionString);
+
+            ApplicationDbContext dbContext = new ApplicationDbContext(optionsBuilder.Options);
         }
     }
 }

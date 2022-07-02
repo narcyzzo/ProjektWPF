@@ -2,6 +2,7 @@
 using ProjektWPF.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace ProjektWPF
         public DbSet<PetModel> Pets { get; set; }
         public DbSet<DoctorModel> Doctors { get; set; }
         public DbSet<AppointmentModel> Appointments { get; set; }
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+
+        }
 
     }
 }
