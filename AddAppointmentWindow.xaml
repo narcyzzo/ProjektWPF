@@ -29,10 +29,11 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>
         <DatePicker Grid.Column="1" Grid.Row="0"
-                 x:Name="DateOfAppointmentDatePicker"
-                 FontSize="30"
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Stretch"/>
+                    x:Name="DateOfAppointmentDatePicker"
+                    FontSize="30"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    x:FieldModifier="public"/>
 
         <!-- PRICE -->
         <TextBlock Grid.Column="0" Grid.Row="1"
@@ -44,7 +45,8 @@
                  x:Name="PriceTextBox"
                  FontSize="30"
                  VerticalAlignment="Center"
-                 HorizontalAlignment="Stretch"/>
+                 HorizontalAlignment="Stretch"
+                 x:FieldModifier="public"/>
 
         <!-- PET -->
         <TextBlock Grid.Column="0" Grid.Row="2"
@@ -57,7 +59,8 @@
                   DisplayMemberPath="DescriptionString"
                   FontSize="30"
                   VerticalAlignment="Center"
-                  HorizontalAlignment="Stretch"/>
+                  HorizontalAlignment="Stretch"
+                  x:FieldModifier="public"/>
 
         <!-- DOCTOR -->
         <TextBlock Grid.Column="0" Grid.Row="3"
@@ -70,7 +73,8 @@
                   DisplayMemberPath="DescriptionString"
                   FontSize="30"
                   VerticalAlignment="Center"
-                  HorizontalAlignment="Stretch"/>
+                  HorizontalAlignment="Stretch"
+                  x:FieldModifier="public"/>
 
         <Button Grid.Column="0" Grid.Row="4"
                 x:Name="ConfirmButton"
