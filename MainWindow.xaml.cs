@@ -31,7 +31,8 @@ namespace ProjektWPF
 
         private void AddAppointmentButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Window win = new AddAppointmentWindow();
+            win.Show();
         }
 
         private void AddPetButton_Click(object sender, RoutedEventArgs e)

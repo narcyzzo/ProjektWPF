@@ -13,7 +13,5 @@ namespace ProjektWPF.Models
         public decimal Price { get; set; }
         public int? Id_Pet { get; set; }
         public int? Id_Doctor { get; set; }
-        public PetModel Pet { get; set; }
-        public DoctorModel Doctor { get; set; }
     }
 }

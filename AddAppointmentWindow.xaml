@@ -1,0 +1,88 @@
+﻿<Window x:Class="ProjektWPF.AddAppointmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektWPF"
+        mc:Ignorable="d"
+        Title="AddAppointmentWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- DATE OF APPOINTMENT -->
+        <TextBlock Grid.Column="0" Grid.Row="0"
+                   Text="Data wizyty:"
+                   FontSize="30"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+        <DatePicker Grid.Column="1" Grid.Row="0"
+                 x:Name="DateOfAppointmentDatePicker"
+                 FontSize="30"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Stretch"/>
+
+        <!-- PRICE -->
+        <TextBlock Grid.Column="0" Grid.Row="1"
+                   Text="Cena:"
+                   FontSize="30"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="1"
+                 x:Name="PriceTextBox"
+                 FontSize="30"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Stretch"/>
+
+        <!-- PET -->
+        <TextBlock Grid.Column="0" Grid.Row="2"
+                   Text="Zwierzę:"
+                   FontSize="30"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+        <ComboBox Grid.Column="1" Grid.Row="2"
+                  x:Name="PetComboBox"
+                  DisplayMemberPath="DescriptionString"
+                  FontSize="30"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Stretch"/>
+
+        <!-- DOCTOR -->
+        <TextBlock Grid.Column="0" Grid.Row="3"
+                   Text="Zwierzę:"
+                   FontSize="30"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+        <ComboBox Grid.Column="1" Grid.Row="3"
+                  x:Name="DoctorComboBox"
+                  DisplayMemberPath="DescriptionString"
+                  FontSize="30"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Stretch"/>
+
+        <Button Grid.Column="0" Grid.Row="4"
+                x:Name="ConfirmButton"
+                Content="Potwierdź"
+                FontSize="30"
+                Click="ConfirmButton_Click"/>
+
+        <Button Grid.Column="1" Grid.Row="4"
+                x:Name="CancelButton"
+                Content="Anuluj"
+                FontSize="30"
+                Click="CancelButton_Click"/>
+
+    </Grid>
+</Window>

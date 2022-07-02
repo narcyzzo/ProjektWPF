@@ -13,5 +13,7 @@ namespace ProjektWPF.Models
         public DateTime DateOfBirth { get; set; }
         public int? Id_Species { get; set; }
         //public SpeciesModel Species { get; set; }
+
+        public string DescriptionString { get { return Name + " (" + DateOfBirth.ToShortDateString() + ")"; } }
     }
 }

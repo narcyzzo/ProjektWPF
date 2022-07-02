@@ -12,5 +12,7 @@ namespace ProjektWPF.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
+
+        public string DescriptionString { get { return FirstName + " " + LastName + ", " + PhoneNumber; } }
     }
 }
