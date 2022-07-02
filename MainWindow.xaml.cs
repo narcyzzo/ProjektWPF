@@ -29,12 +29,24 @@ namespace ProjektWPF
             
         }
 
+        /// <summary>
+        /// AddAppointmentButton.Click event. Creates new AddAppointmentWindow instance
+        /// and shows it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddAppointmentButton_Click(object sender, RoutedEventArgs e)
         {
             Window win = new AddAppointmentWindow();
             win.Show();
         }
 
+        /// <summary>
+        /// AddPetButton.Click event. Creates new AddPetWindow instance
+        /// and shows it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddPetButton_Click(object sender, RoutedEventArgs e)
         {
             Window win = new AddPetWindow();

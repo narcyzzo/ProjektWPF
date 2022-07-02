@@ -27,6 +27,12 @@ namespace ProjektWPF
             InitializeComponent();
         }
 
+        /// <summary>
+        /// AddAppointmentWindow.Loaded event. It's called after instance have been loaded
+        /// to get from database Pets and Doctors entries.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
@@ -39,6 +45,22 @@ namespace ProjektWPF
             }
         }
 
+        /// <summary>
+        /// CancelButton.Click event. Closes AddAppointmentWindow instance.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// ConfirmButton.Click event. Adds new appointment entry to database based
+        /// on input controls in AddAppointmentWindow instance and closes it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
@@ -65,11 +87,6 @@ namespace ProjektWPF
             {
                 System.Windows.MessageBox.Show(exc.Message, "ERROR");
             }
-        }
-
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        }       
     }
 }

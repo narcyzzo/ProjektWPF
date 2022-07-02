@@ -27,6 +27,12 @@ namespace ProjektWPF
             InitializeComponent();
         }
 
+        /// <summary>
+        /// AddPetWindow.Loaded event. It's called after instance have been loaded
+        /// to get from database Species entries.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
@@ -38,11 +44,22 @@ namespace ProjektWPF
             }
         }
 
+        /// <summary>
+        /// CancelButton.Click event. It closes AddPetWindow instance.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// ConfirmButton.Click event. Adds new pet entry to database based
+        /// on input controls in AddPetWindow instance and closes it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
